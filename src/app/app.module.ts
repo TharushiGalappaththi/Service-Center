@@ -13,7 +13,7 @@ import { ForgotPassordComponent } from './forgot-passord/forgot-passord.componen
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AuthService } from "./shared/services/auth.service";
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './navbar/navbar.component'; 
 import { HomepageComponent } from './homepage/homepage.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ProfileComponent } from './customerdashboard/profile/profile.component';
@@ -31,6 +31,12 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import { GenerateqrComponent } from './servicestation/generateqr/generateqr.component'; 
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { LubricantsComponent } from './customerdashboard/lubricants/lubricants.component';
+import { AdmindashboardComponent } from './adminDashboard/admindashboard/admindashboard.component';
+import { AdminsidenavComponent } from './adminDashboard/adminsidenav/adminsidenav.component';
+import { AdminlubricantsComponent } from './adminDashboard/adminlubricants/adminlubricants.component';
+import { LubricantComponent } from './adminDashboard/adminlubricants/lubricant/lubricant.component';
+import { LubricantListComponent } from './adminDashboard/adminlubricants/lubricant-list/lubricant-list.component';
+import { LubricantService } from './shared/lubricant.service';
 
 
 
@@ -51,10 +57,16 @@ import { LubricantsComponent } from './customerdashboard/lubricants/lubricants.c
     VehicleListComponent,
     GenerateqrComponent,
     LubricantsComponent,
+    AdmindashboardComponent,
+    AdminsidenavComponent,
+    AdminlubricantsComponent,
+    LubricantComponent,
+    LubricantListComponent
+    
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.config),
+    AngularFireModule.initializeApp(environment.firebaseConfig,environment.configs),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AppRoutingModule,
@@ -66,7 +78,7 @@ import { LubricantsComponent } from './customerdashboard/lubricants/lubricants.c
     ZXingScannerModule,
     ToastrModule.forRoot()
   ],
-  providers: [AuthService,VehicleService],
+  providers: [AuthService,VehicleService,LubricantService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { }  

@@ -1,0 +1,93 @@
+<div class="pt-5 pb-2 mb-3 ">
+    <p class="border-bottom"><b>Dashboard/</b>Add Lubricants</p>
+</div>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+<input type="hidden" name="id"  #id="ngModel" [(ngModel)]="service.formData.id">    
+    <div class="container "  >
+    
+            <div class="" >
+                <label for="">User ID</label>
+                <div class="row">
+                    <div class="col form-group">
+                        <input  name="users_id"  #users_id="ngModel" [(ngModel)]="service.formData.users_id" class="form-control" placeholder="User Id">
+                    </div>   
+                </div>
+            </div>
+            
+              
+            <div class="" >
+                <label for="Engineoil">Engine oil</label>
+                <div class="row">
+                    <div class="col">
+                        <!--input    name="engineoil_name" #user_id="ngModel" [(ngModel)]="service.formData.engineoil_name" placeholder="Brand name"-->
+                        <select id="engineoil_name" name="engineoil_name" #user_id="ngModel" [(ngModel)]="service.formData.engineoil_name" class="form-control" >
+                            <option value="Mineral Oil">Mineral Oil</option>
+                            <option value="Natural Gas Oil">Natural Gas Oil</option>
+                            <option value="Ultra RDE oil">Ultra RDE oil</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input   type="number"  name="engineoil_quantity" #user_id="ngModel" [(ngModel)]="service.formData.engineoil_quantity" placeholder="ml" >
+                    </div>
+                  </div>
+            </div>
+  
+            <div class="" >
+                <label for="">Circulation oil</label>
+                <div class="row">
+                    <div class="col">
+                        <!--input     name="circulationoil_name"  #user_id="ngModel" [(ngModel)]="service.formData.circulationoil_name" placeholder="Brand name"-->
+                        <select id="circulationoil_name" name="circulationoil_name" #user_id="ngModel" [(ngModel)]="service.formData.circulationoil_name" class="form-control" >
+                            <option value="Mineral Oil">Mineral Oil</option>
+                            <option value="Natural Gas Oil">Natural Gas Oil</option>
+                            <option value="Ultra RDE oil">Ultra RDE oil</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input   type="number"  name="circulationoil_quantity" #user_id="ngModel" [(ngModel)]="service.formData.circulationoil_quantity" placeholder="ml" >
+                      </div>
+                </div>
+            </div>
+  
+            <div class="" >
+                <label for="">Gear oil</label>
+                <div class="row">
+                    <div class="col">
+                      <!--input    name="gearoil_name"  #user_id="ngModel" [(ngModel)]="service.formData.gearoil_name" placeholder="Brand name"-->
+                    <select id="gearoil_name" name="gearoil_name" #user_id="ngModel" [(ngModel)]="service.formData.gearoil_name" class="form-control" >
+                        <option value="Mineral Oil">Mineral Oil</option>
+                        <option value="Natural Gas Oil">Natural Gas Oil</option>
+                        <option value="Ultra RDE oil">Ultra RDE oil</option>
+                    </select>
+                    </div>
+                    <div class="col">
+                      <input  type="number" name="gearoil_quantity" #user_id="ngModel" [(ngModel)]="service.formData.gearoil_quantity" placeholder="ml" >
+                    </div>
+                </div>
+            </div>
+  
+            <div class="" >
+                <label for="">Hydraulic oil</label>
+                <div class="row">
+                    <div class="col">
+                        <!--input  name="hydraulicoil_name" #user_id="ngModel" [(ngModel)]="service.formData.hydraulicoil_name" placeholder="Brand name"-->
+                        <select id="hydraulicoil_name" name="hydraulicoil_name" #user_id="ngModel" [(ngModel)]="service.formData.hydraulicoil_name" class="form-control" >
+                            <option value="Mineral Oil">Mineral Oil</option>
+                            <option value="Natural Gas Oil">Natural Gas Oil</option>
+                            <option value="Ultra RDE oil">Ultra RDE oil</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="number" name="hydraulicoil_quantity" #user_id="ngModel" [(ngModel)]="service.formData.hydraulicoil_quantity" placeholder="ml" >
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <button type="submit"  class="btn btn-lg btn-block btn-info">SUBMIT</button>
+            </div>
+                
+              
+            
+</div>   
+</form> 

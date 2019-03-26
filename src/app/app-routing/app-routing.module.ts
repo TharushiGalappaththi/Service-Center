@@ -15,6 +15,8 @@ import { ForgotPassordComponent } from '../forgot-passord/forgot-passord.compone
  import { ProfileComponent } from "../customerdashboard/profile/profile.component";
  import {VehiclesComponent} from '../customerdashboard/vehicles/vehicles.component'
 import { GenerateqrComponent } from '../servicestation/generateqr/generateqr.component';
+import { AdmindashboardComponent } from '../adminDashboard/admindashboard/admindashboard.component';
+import { AdminlubricantsComponent } from '../adminDashboard/adminlubricants/adminlubricants.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -25,7 +27,9 @@ const routes: Routes = [
    { path: 'verify-email-address', component: VerifyEmailComponent },
    { path: 'customer-profile', component: ProfileComponent },
    { path: 'vehicle-register', component: VehiclesComponent },
-   { path: 'qr-generator', component: GenerateqrComponent }
+   { path: 'qr-generator', component: GenerateqrComponent },
+   { path: 'admin-dashboard', component: AdmindashboardComponent },
+   { path: 'admin-add-lubricants' , component: AdminlubricantsComponent}
 ];
 
 @NgModule({

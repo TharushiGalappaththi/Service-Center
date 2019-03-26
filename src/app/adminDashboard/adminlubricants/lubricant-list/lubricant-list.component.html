@@ -1,0 +1,25 @@
+<div style="margin-top:100px">
+<table class="table-hover">
+  <thead>
+    <th>User Id </th>
+    <th>EngineOil</th>
+    <th>CirculationOil</th>
+    <th>GearOil</th>
+    <th>HydraulicOil</th>
+    <th></th>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor="let lub of list">
+      <td (click)="onEdit(lub)">{{lub.users_id}}</td>
+      <td (click)="onEdit(lub)">{{lub.engineoil_name}}  {{lub.engineoil_quantity}} ml</td>
+      <td (click)="onEdit(lub)">{{lub.circulationoil_name}}  {{lub.circulationoil_quantity}} ml</td>
+      <td (click)="onEdit(lub)">{{lub.gearoil_name}}  {{lub.gearoil_quantity}} ml</td>
+      <td (click)="onEdit(lub)">{{lub.hydraulicoil_name}}  {{lub.hydraulicoil_quantity}} ml</td>
+      <td><button (click)="onDelete(lub.id)" type="button" class="btn btn-outline-danger btn-sm">DELETE</button></td>
+
+    </tr>
+  
+  </tbody>
+</table>
+</div>
