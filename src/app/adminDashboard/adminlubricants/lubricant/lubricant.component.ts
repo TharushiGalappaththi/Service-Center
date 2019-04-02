@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 export class LubricantComponent implements OnInit {
-
+hydraulicoil_name = 'Caltex';
   constructor(private service: LubricantService,
     private firestore: AngularFirestore,
     private toaster:ToastrService) { }
